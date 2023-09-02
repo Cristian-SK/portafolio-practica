@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+
+//Alowas you to pull get delete a servidores
+import {HttpClientModule} from '@angular/common/http';
+
 //routes
 import { AppRoutingModule } from './app-routing.module';
 
@@ -23,7 +28,9 @@ import { ItemComponent } from './pages/item/item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+//import    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
