@@ -12,3 +12,4 @@ export interface InfoPage{
     tumbler?: string;
     equipo_trabajo?: any[];
 }
+

@@ -10,9 +10,18 @@ export class InfoPageService {
   info: InfoPage = {};
   cargada = false;
 
+  equipo: any[] = [];
+
   constructor( private http: HttpClient) { 
 
     console.log('Services page information done');
+
+    this.cargarInfo();
+    this.cargarEquipo();
+
+  }
+
+  private cargarInfo(){
 
     //Leer JSON archive
     this.http.get('assets/data/data-pagina.json')
@@ -25,5 +34,15 @@ export class InfoPageService {
 
       });
 
+  }
+  private cargarEquipo(){
+
+    this.http.get('https://angular-html-5865c-default-rtdb.firebaseio.com/equipo.json')
+    .subscribe( (resp: any) => {
+      
+      this.equipo = resp;
+      console.log(resp);
+    });
+   
   }
 }
