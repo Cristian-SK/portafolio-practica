@@ -1,6 +1,3 @@
-
-
-
 export interface InfoPage{
     title?: string;
     email?: string;
